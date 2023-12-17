@@ -1,0 +1,123 @@
+html {
+  text-align: center;  /*set this with the body inline-block to center the body*/
+  background-color: white;
+  font-size: 1vh;  /*set root font size, and then use rem throughout the file*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 66vh) { /*portrait screen*/
+  html {
+    font-size: 1.5vw;
+  }
+}
+
+body {
+  background-color: #151522;
+  color: #cacaca;
+  font-family: 'Cabin Sketch', "Arial";
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 100vh) { /*portrait screen*/
+  body {
+    width: 100vw;
+  }
+}
+
+svg {
+  height: 36vh;
+}
+
+@media (max-width: 40vh) { /*portrait screen*/
+  svg {
+  height: 90vw;
+  }
+}
+
+h1 {
+  font-size: 8.4rem;
+  font-weight: 100;
+  margin: 2.5rem 0;
+}
+
+h2 {
+  font-size: 4.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 100;
+  margin: 1.7rem;
+}
+
+#keypad a {
+  font-size: 6.4rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+#keypad a.finished {  /*reset pointer after the game is over to prevent further clicking*/
+  cursor: default;
+}
+
+#guessing {
+  font-size: 6.2rem;
+  margin: 2.4rem auto;
+}
+
+#keypad .correct-letter {   /*letters which belong to the word*/
+  color: #89d47b;
+  cursor: no-drop;
+}
+
+#keypad .incorrect-letter {  /*letters which don't belong to the word*/
+  color: #f57b7b;
+  cursor: no-drop;
+}
+
+.hidden {  /*visibility: hidden;*/
+  display: none;
+}
+
+[status="escaped"] {  /*a status of the masthead*/
+  color: #89d47b;
+}
+
+[status="hanged"] {  /*a status of the masthead*/
+  color: #f57b7b;
+}
+
+
+#tally {
+  margin-bottom: 1rem;
+}
+span {
+  font-size: 3.3rem;
+}
+
+#wins,
+#losses {
+  margin-right: 4rem
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {  /*when buttons are being pressed down*/
+  position: relative;
+  top: 2px;
+}
+
+svg {
+  stroke: #cacaca;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+}

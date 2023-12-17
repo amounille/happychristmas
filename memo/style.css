@@ -1,0 +1,87 @@
+body {
+  background-color: #151522;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.is-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  max-width: 616px;
+  margin: 0 auto;
+  perspective: 700px;
+}
+
+.memo-game {
+  display: flex;
+  flex-grow: 1;
+}
+
+.new-game-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-game-button .btn {
+  font-size: 1.4rem;
+}
+.new-game-button .btn span {
+  margin: 0 0.5rem;
+}
+
+.card {
+  max-width: 200px;
+  min-width: 120px;
+  height: 160px;
+  font-size: 4rem;
+  font-weight: bold;
+  border: 12px solid white;
+  background-color: lightblue;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #5fb3ce;
+  transition: all 0.5s ease-in-out;
+}
+.card--guessed {
+  background-color: white;
+  border: none;
+}
+.card:disabled:not(.card--guessed) {
+  background-color: pink;
+  border-color: pink;
+}
+.card--opened {
+  transform: rotateY(180deg);
+}
+
+.btn {
+  font-size: 1.2rem;
+  background-color: gold;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+

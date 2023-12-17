@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>❤️ Good Luck Alex ❤️</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <div class="memo-game" x-data="generateMemoComponent()">
+    <div class="grid">
+      <template x-for="(item,idx) in charList" :key="idx">
+        <button class="card" @click.prevent="onClick(item, idx)" x-text="getText(item, idx)" x-bind:class="{'card--guessed': !isCharActive(item), 'card--opened': isSelected(item,idx)}" x-bind:disabled="isDisabled"></button>
+      </template>
+    </div>
+
+    <template x-if="isGameOver()">
+      <div class="new-game-button">
+        <button class="btn" @click="onNewGame()">
+          <span>GG Amor ! the first clue is : 'ym' muahhhh</span> 
+        </button>
+      </div>
+    </template>
+  </div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.7.0/alpine.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
